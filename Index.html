@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Rowe's Family Pharmacy</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<body>
+<style>
+.navbar {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #ffffff;
+padding: 20px 40px;
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+border-bottom: 3px solid #0a9396;
+transition: background-color 0.3s, box-shadow 0.3s;
+}
+.navbar:hover {
+background-color: #02d7f1;
+box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+.navbar a {
+color: #ffffff;
+text-align: center;
+padding: 14px 30px;
+text-decoration: none;
+border-radius: 30px;
+position: relative;
+overflow: hidden;
+transition: color 0.3s, transform 0.3s, background-color 0.3s;
+font-weight: 600;
+margin: 0 10px;
+}
+.navbar a::after {
+content: '';
+position: absolute;
+left: 50%;
+bottom: 0;
+width: 0;
+height: 4px;
+background: #ffb703;
+transition: width 0.4s, left 0.4s;
+}
+.navbar a:hover {
+color: #02d7f1;
+background-color: #ffb703;
+transform: translateY(-3px);
+}
+.navbar a:hover::after {
+width: 100%;
+left: 0;
+}
+.navbar .logo {
+font-size: 32px;
+font-weight: bold;
+letter-spacing: 2px;
+color: #ffffff;
+transition: transform 0.3s;
+}
+.navbar .logo:hover {
+transform: scale(1.1);
+color: #ffb703;
+}
+@media (max-width: 768px) {
+.navbar {
+flex-direction: column;
+align-items: flex-start;
+}
+.navbar a {
+padding: 12px;
+width: 100%;
+text-align: left;
+margin: 5px 0;
+}
+}
+
+
+    .hero {
+        height: 100vh;
+        background-image: url("https://i.imgur.com/fVmFvFN.jpeg");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+
+        position: relative;
+        width: 100%;
+
+        object-fit: cover; /* Ensures the image covers the area without distortion */
+     }
+
+
+    .hero h1 {
+        position: relative;
+        font-size: 3em;
+        margin: 0;
+    }
+    .hero p {
+        position: relative;
+        font-size: 1.5em;
+    }
+
+
+
+    .accordion {
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.accordion-item {
+    border-bottom: 1px solid #ccc;
+}
+.accordion-header {
+    padding: 10px;
+    cursor: pointer;
+    background: #02d7f1;
+    color: white;
+}
+.accordion-content {
+    display: none;
+    padding: 10px;
+
+
+ }
+</style>
+<div class="navbar">
+    <a style="color: #101010; font-size: 25px; font-family: 'Lucida Calligraphy'" class="logo" href="Index.html"><img style="height: 80px; width: 80px; padding-right: 10px" src="rfpimg.jpeg" alt=""> Rowe's Family Pharmacy</a>
+    <div>
+        <a style="color: #000000" href="About%20Us.html">About</a>
+        <a style="color: #0b0b0b" href="Services.html">Services</a>
+        <a style="color: #000000" href="Products.html">Products</a>
+        <a style="color: #0b0b0b" href="Location.html">Location</a>
+        <a style="color: #0b0b0b" href="Contact.html">Contact</a>
+    </div>
+</div>
+
+<div class="hero"></div>
+<section style="text-align: center; padding: 100px; font-family: 'Lucida Calligraphy';"> <h1>Why Choose Us?</h1></section>
+
+<section style="background: #02d7f1; padding: 30px">
+<div style="   .card.expanded .card-details {
+        display: block;
+    }
+.card {
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        width: 300px;
+        cursor: pointer;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+   .card.expanded .card-details {
+        display: block;
+    } }" class="container text-center">
+    <div class="row">
+        <div class="col">
+            <div class="card" style="width: 18rem; height: 28rem">
+                <img src="rfpimg.jpeg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Family-Owned & Operated</h5>
+                    <p class="card-text">With a commitment to our community, we treat our customers like family, ensuring that you receive the best care possible.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+             <div class="card" onclick="toggleCard(this)" style="width: 18rem; height: 28rem">
+                <img src="Cashproducts.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">Expert Pharmacists and Friendly Staff</h5>
+                    <p class="card-text"> Our knowledgeable team is here to provide you with expert advice, medication management, and health consultations tailored to your needs.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <div class="card" onclick="toggleCard(this)" style="width: 18rem; height: 28rem">
+                <img src="Medication.jpg" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" >Quality Products</h5>
+                    <p class="card-text" >We stock a variety of over-the-counter medications, health supplements, and wellness products to help you maintain your health at home.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+    <script>
+        function toggleCard(card) {
+            card.classList.toggle('expanded');
+        }
+    </script>
+</section>
+
+
+<section>  <div style="text-align: center; padding-top: 250px;  padding: 50px"><h1 style="padding-top: 150px; font-family: 'Lucida Calligraphy'">Discover Our Health and Wellness Products</h1>
+<h6 style="padding: 30px;  font-family: 'Lucida Sans'">Our products are carefully selected to provide you with the best quality and value. Browse our selection of health and beauty care, snacks, and refreshments to find what you need.</h6>
+    </div>
+    <div  class="container text-center">
+        <div class="row">
+            <div class="col"><img style="height: 250px; width: 250px" src="LilCritters.jpg" alt=""><div style="font-size: 20px; padding: 30px">LilCritters Gummy Vitamins</div></div>
+            <div class="col"><img style="height: 250px; width: 250px" src="Zentel2.jpg" alt=""><div style="font-size: 20px; padding: 30px">Zentel Tablets</div></div>
+                <div class="col"><img style="height: 250px; width: 250px" src="Wormalize.jpg" alt=""><div style="font-size: 20px; padding: 30px">Wormilize Treatments</div></div>
+                <div class="col"><img style="height: 250px; width: 250px" src="Wellbaby.jpg" alt=""><div style="font-size: 20px; padding: 30px">WellBaby MultiVitamin Liquid</div></div>
+        </div>
+        </div>
+</section>
+<section style="padding: 50px; background: #02d7f1"><div class="container text-center">
+    <div class="row">
+        <div style="padding-top: 100px" class="col">
+            <h1 style="font-family: 'Lucida Calligraphy'">Essential Nutrition for a Healthy Life</h1>
+            <p style="font-family: 'Lucida Sans'; padding: 30px">At Rowe’s Family Pharmacy, we believe that good health starts with good nutrition. Our multivitamins for men and women are specially formulated to provide you with the essential vitamins and minerals you need to maintain optimal health. Trust us to provide you with the best in nutritional supplements.</p>
+        </div>
+        <div class="col">
+            <img style="height: 500px; width: 500px" src="fergoblin.jpg" alt="">
+        </div>
+    </div></div>
+</section>
+<section style="padding-top: 150px">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col">
+                        <img style="height: 500px; width: 500px" src="Wellbaby.jpg" alt="">
+                    </div>
+                    <div class="col" style="padding-top: 150px">
+                        <h1 style="font-family: 'Lucida Calligraphy'">Nourish Your Baby with Gentle Care</h1>
+                        <p style="font-family: 'Lucida Sans'; padding: 30px">At Rowe’s Family Pharmacy, we understand that your baby is unique. That’s why we offer a range of baby vitamins for your little one. Our products are designed to provide gentle care for your baby, keeping them healthy.</p>
+
+                    </div>
+                </div></div>
+</section>
+<section style="padding: 100px">
+    <h2>Frequently Asked Questions</h2>
+    <div class="accordion">
+        <div class="accordion-item">
+            <div class="accordion-header">Do you Offer Delivery?</div>
+            <div class="accordion-content">Yes, we offer Delivery in the Morant Bay Area however if you live outside Morant Bay Call (876) 516-8183.</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header"> What are your pharmacy hours?</div>
+            <div class="accordion-content">We are open on Mondays - Fridays from 8:30 am - 7:00 pm</div>
+        </div>
+        <div class="accordion-item">
+            <div class="accordion-header">How can I contact you?</div>
+            <div class="accordion-content">You can Call (876) 516-8183 or DM us on Instagram @rowesfamilypharmacyja</div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer style="background-color: #cbf6fa; padding: 20px; text-align: center;">
+    <h2>Rowe's Family Pharmacy</h2>
+    <p>Best Medicine, Best Rates, No one does Service better than Us</p>
+    <address>
+        Shop #8, Pressa Plaza,<br>
+        1 Wharf Road,<br>
+        Morant Bay, St. Thomas
+    </address>
+    <p> Call <a href="tel:+18765168183">(876) 516-8183</a></p>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script>
+    const headers = document.querySelectorAll('.accordion-header');
+    headers.forEach(header => {
+        header.addEventListener('click', () => {
+            const content = header.nextElementSibling;
+            content.style.display = content.style.display === 'block' ? 'none' : 'block';
+        });
+    });
+</script>
+</body>
+</html>
